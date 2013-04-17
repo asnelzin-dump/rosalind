@@ -1,4 +1,4 @@
 Rosalind 
 ========
 
-Solution of the problem from http://rosalind.info/
+Solution of the problems from http://rosalind.info/
