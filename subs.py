@@ -1,4 +1,4 @@
-from sys import stdin
+from sys import stdin, argv
 
 def subs(str, substr):
 	substr_len = len(substr)
@@ -13,7 +13,7 @@ def subs(str, substr):
 def main():
 	data = None
 	try:
-		f = open('/home/asnelzin/Загрузки/rosalind_subs.txt', 'r')
+		f = open(argv[1], 'r')
 		#f = stdin
 		try:
 			data = [s.replace('\n', '') for s in f.readlines()]

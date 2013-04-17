@@ -1,4 +1,4 @@
-from sys import stdin
+from sys import stdin, argv
 
 def pper(n, k):
 	result = 1
@@ -9,7 +9,7 @@ def pper(n, k):
 def main():
 	input_data = None
 	try:
-		f = open("/home/asnelzin/Загрузки/rosalind_pper.txt", 'r')
+		f = open(argv[1], 'r')
 		try:
 			input_data = f.readline()
 		finally:

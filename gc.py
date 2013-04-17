@@ -1,4 +1,5 @@
 from operator import itemgetter
+from sys import argv
 
 def count_of_symbol(c, str):
 	counter = 0
@@ -18,7 +19,7 @@ def get_max_gc(data):
 
 def main():
 	try:
-		f = open("/home/asnelzin/Загрузки/rosalind_gc (1).txt", "r")
+		f = open(argv[1], "r")
 		try:
 			raw_data = f.readlines()
 			raw_data = [s.replace('\n', '') for s in raw_data]
@@ -38,6 +39,7 @@ def main():
 			f.close()
 	except IOError:
 		print("Error: Can't find file or read data")
+		return
 	
 	num, dna, gc = get_max_gc(data)
 	print("Rosalind_{0}\n{1}".format(num, gc))

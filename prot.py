@@ -1,3 +1,5 @@
+from sys import argv
+
 def decode(rna, table):
 	prot = table[rna]
 	if prot == "Stop":
@@ -5,7 +7,7 @@ def decode(rna, table):
 	else:
 		return table[rna]
 
-rna = open("/home/asnelzin/Загрузки/rosalind_prot.txt").readline()[:-1]
+rna = open(argv[1]).readline()[:-1]
 
 table = {"UUU":"F",   "CUU":"L",      "AUU":"I",      "GUU":"V",
          "UUC":"F",   "CUC":"L",      "AUC":"I",      "GUC":"V",
@@ -30,4 +32,4 @@ prot = ""
 for i in rna:
 	prot += decode(i, table)
 
-open("/home/asnelzin/projects/rosalind/prot.out", 'w').write(prot)
+open("prot.out", 'w').write(prot)

@@ -1,4 +1,5 @@
 from collections import Counter
+from sys import argv
 
 def mrna(prot, table):
 	number_rnas = 1
@@ -30,7 +31,7 @@ def main():
 	table_counter = Counter(table.values())
 	prot = None
 	try:
-		f = open("/home/asnelzin/Загрузки/rosalind_mrna.txt", 'r')
+		f = open(argv[1], 'r')
 		try:
 			prot = f.readline()[:-1]
 		finally:

@@ -1,4 +1,4 @@
-from sys import stdin
+from sys import stdin, argv
 
 def number_to_string(num, alphabet):
 	s = map(lambda x : alphabet[x] , num)
@@ -27,7 +27,7 @@ def get_all_numbers(alphabet, k, n):
 def main():
 	data = None
 	try:
-		in_f = open("/home/asnelzin/Загрузки/rosalind_lexf.txt", 'r')
+		in_f = open(argv[1], 'r')
 		#f = stdin
 		try:
 			data = [i.replace('\n', '') for i in in_f.readlines()]

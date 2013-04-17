@@ -1,3 +1,5 @@
+from sys import argv
+
 def protein_mass(p):
 	masses = { "A" : 71.03711, "C" : 103.00919, "D" : 115.02694, 
 	 		   "E" : 129.04259, "F" : 147.06841, "G" : 57.02146, 
@@ -14,7 +16,7 @@ def protein_mass(p):
 def main():
 	prot = None
 	try:
-		f = open("/home/asnelzin/Загрузки/rosalind_prtm.txt", 'r')
+		f = open(argv[1], 'r')
 		try:
 			prot = f.readline()[:-1]
 		finally:

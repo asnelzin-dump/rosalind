@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+from sys import argv
 
-input_string = open("/home/asnelzin/Загрузки/rosalind_revc.txt").readline()
+input_string = open(argv[1]).readline()
 out_string = ""
 
 for c in input_string:

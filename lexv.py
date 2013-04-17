@@ -1,4 +1,4 @@
-from sys import stdin
+from sys import stdin, argv
 
 def number_to_string(num, alphabet):
 	s = map(lambda x : alphabet[x] , num)
@@ -32,7 +32,7 @@ def in_new_alphabet(s, alphabet):
 
 def main():
 	try:
-		in_file = open("/home/asnelzin/Загрузки/rosalind_lexv (1).txt", 'r')
+		in_file = open(argv[1], 'r')
 		try:
 			data = [s.replace('\n', '') for s in in_file.readlines()]
 		finally:
